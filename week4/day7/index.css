@@ -1,0 +1,31 @@
+.container {
+  border: 10px solid goldenrod;
+  min-height: 100vh;
+  max-width: 100vh;
+  display: grid;
+  grid-template-columns: 100px 1fr 100px; 
+  
+  /* widths, this will make the first and last column 100px and distribute the rest of the space to the other rows, if you did 1fr three times then it would distribute evenly in 3 columns, fr accounts for gaps */
+  
+  /* if you did auto then it would take the exact height the column needs for its contents and then would distribute the rest among the frs */
+  
+  grid-template-rows: repeat(5, 100px); 
+  
+  /* heights, this will give you 5 rows of the same height */
+  
+  grid-gap: 20px; 
+  
+  /* adds space between your boxes, very similar to margin */
+  
+ grid-auto-rows: 200px; 
+ 
+ /* every new row made automatically will get this height */
+ 
+ grid-auto-flow: column; 
+ 
+ /* will make every new row addded actually a column */
+ 
+ grid-auto-columns: 200px; 
+ 
+ /* makes any auto created column this width */
+}
